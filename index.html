@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IlhamAgusK</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body>
+    <!--Header Start-->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#home" class="font-bold text-lg text-primary block py-6">IlhamAgusK</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" class="lg:hidden">
+                        <svg id="hamburger-icon" data-state="hamburger" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <rect x="3" y="5" width="18" height="2"></rect>
+                            <rect x="3" y="11" width="18" height="2"></rect>
+                            <rect x="3" y="17" width="18" height="2"></rect>
+                        </svg>
+                    </button>
+
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#home"
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about"
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Tentang Saya</a>
+                            </li>
+                            <li class="group">
+                                <a href="#portfolio"
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact"
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header End-->
+
+    <!--Hero Section Start-->
+    <section id="home" class="pt-36 dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <!-- Teks dan Tombol -->
+                <div class="w-full self-center px-4 lg:w-1/2">
+                    <h1 class="text-base font-semibold text-primary md:text-xl">Halo Semua 👋, Saya <span
+                            class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">Ilham Agus Kurniawan</span></h1>
+                    <h2 class="font-medium text-secondary text text-lg mb-5 lg:text-2xl">Mahasiswa Teknik Informatika &
+                        <span class="text-dark">Programmer</span>
+                    </h2>
+                    <a href="#contact"
+                        class="text-base font-semibold text-white bg-primary py-3 px-4 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Carousel -->
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <!-- Background Shape -->
+                    <div class="absolute inset-0 justify-center items-center ml-96 mt-32 pl-56 hidden lg:flex">
+                        <img src="dist/img/BIfix5.png" class="absolute animate-spin-slow" alt="Background Image" />
+                    </div>
+                    <div class="relative w-full overflow-hidden mt-10 lg:w-1/2 lg:mt-9 lg:right-0 lg:ml-36">
+                        <!-- Slides -->
+                        <div id="carousel" class="flex transition-transform duration-500 ease-in-out img">
+                            <img src="dist/img/IlhamAgus.jpg" class="h-[400px] object-cover lg:h-[500px] md:h-[500px] rounded-lg relative z-10" alt="Gambar 1">
+                            <img src="dist/img/gambar2.jpg" class="h-[400px] object-cover lg:h-[500px] rounded-lg relative z-10" alt="Gambar 1">
+                            <img src="dist/img/gambar3.jpg" class="h-[400px] object-cover lg:h-[500px] rounded-lg relative z-10" alt="Gambar 1">
+                            <img src="dist/img/gambar5.jpg" class="h-[400px] object-cover lg:h-[500px] rounded-lg relative z-10" alt="Gambar 1">
+                            <img src="dist/img/gambar6.jpg" class="h-[400px] object-cover lg:h-[500px] rounded-lg relative z-10" alt="Gambar 1">
+                        </div>
+
+                        <!-- Previous Button -->
+                        <button id="prevBtn"
+                            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-primary p-2 rounded-full">
+                            <span>&lt;</span>
+                        </button>
+
+                        <!-- Next Button -->
+                        <button id="nextBtn"
+                            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-primary p-2 rounded-full">
+                            <span>&gt;</span>
+                        </button>
+
+                        <!-- Indicators -->
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                            <button class="w-2 h-2 bg-primary rounded-full indicator" data-slide="0"></button>
+                            <button class="w-2 h-2 bg-white rounded-full indicator" data-slide="1"></button>
+                            <button class="w-2 h-2 bg-white rounded-full indicator" data-slide="2"></button>
+                            <button class="w-2 h-2 bg-white rounded-full indicator" data-slide="3"></button>
+                            <button class="w-2 h-2 bg-white rounded-full indicator" data-slide="4"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Hero Section End-->
+
+
+    <!--About Section Start-->
+    <section id="about" class="pt-12 lg:pt-36 pb-32">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-10 lg:w-1/2 ">
+                    <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Shaping the Future with
+                        Cutting-Edge Technology!!!</h2>
+                    <p class="font-medium text-secondary mb-10 leading-relaxed">
+                        Saya adalah mahasiswa Teknik Informatika yang memiliki potensi di bidang Pemrograman dan
+                        Keamanan Jaringan (Cybersecurity). Dengan keterampilan dalam pengembangan aplikasi berbasis web
+                        desktop dan mobile menggunakan berbagai bahasa pemrograman seperti Python, Java, dan PHP, saya
+                        terus mengasah kemampuan teknis untuk menciptakan solusi perangkat lunak yang efisien dan
+                        inovatif.
+                        <!-- <span class="text-dark font-bold">
+                            deleniti dicta?
+                        </span> -->
+                    </p>
+                </div>
+                <div class="w-full px-4 lg:w-1/2">
+                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Let's GOOO!</h3>
+                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
+                        Dengan memanfaatkan kekuatan teknologi canggih, mari bersama-sama kita revolusi berbagai
+                        industri dan ciptakan solusi inovatif yang akan membentuk dunia yang lebih cerdas dan terhubung,
+                        memberi kekuatan kepada generasi mendatang untuk menghadapi tantangan masa depan dengan
+                        efisiensi, kreativitas, dan keberlanjutan.
+                    </p>
+                    <div class="flex items-center">
+                        <!--Youtube-->
+                        <a href="https://www.youtube.com/@Xavierzz-q9f" target="_blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-350 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>YouTube</title>
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+
+                        <!--Instagram-->
+                        <a href="https://www.instagram.com/ilham_agusk" target="_blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-350 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Instagram</title>
+                                <path
+                                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+                            </svg>
+                        </a>
+
+                        <!--Github-->
+                        <a href="https://github.com/IlhamAgusk" target="_blank"
+                            class="w-7 h-7 mr-3 rounded-full flex justify-center items-center border border-slate-350 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>GitHub</title>
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                        </a>
+
+                        <!--Discord-->
+                        <a href="http://discordapp.com/users/1070530256689184799" target="_blank"
+                            class="w-7 h-7 mr-3 rounded-full flex justify-center items-center border border-slate-350 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>Discord</title>
+                                <path
+                                    d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Section End-->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4">Project Terbaru</h2>
+                    <p class="font-medium text-md text-secondary">
+                        Beberapa proyek terbaru yang telah saya kerjakan. Klik untuk melihat detail lebih lanjut.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="w-full px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project Item 1 -->
+                    <div class="group">
+                        <a href="project1.html">
+                            <div class="rounded-lg overflow-hidden shadow-md">
+                                <img src="/dist/img/ProjectPendataanAsrama.jpg" alt="Project 1"
+                                    class="w-full transition-transform duration-300 group-hover:scale-110">
+                            </div>
+                            <h3 class="text-lg font-semibold text-dark mt-4 group-hover:text-primary">Sistem Pendataan
+                                Asrama</h3>
+                            <p class="text-sm text-secondary">Sistem pendataan asrama pondok pesantren dar-el hikmah
+                                Pekanbaru yang berbasis website dan responsif pada tampilan desktop dan mobile (Masih
+                                dalam tahap pengembangan).</p>
+                        </a>
+                    </div>
+                    <!-- Project Item 4 -->
+                    <div class="group">
+                        <a href="project2.html">
+                            <div class="rounded-lg overflow-hidden shadow-md">
+                                <img src="dist/img/ProjectKlasifikasiBPNN.png" alt="Project 3"
+                                    class="w-full transition-transform duration-300 group-hover:scale-110">
+                            </div>
+                            <h3 class="text-lg font-semibold text-dark mt-4 group-hover:text-primary">Metode Klasifikasi
+                                BPNN (Python)</h3>
+                            <p class="text-sm text-secondary">Project metode klasifikasi menggunakan BPNN untuk dataset
+                                iris dari tiga spesies bunga menggunakan bahasa pemrograman python.</p>
+                        </a>
+                    </div>
+                    <!-- Project Item 5 -->
+                    <div class="group">
+                        <a href="project3.html ">
+                            <div class="rounded-lg overflow-hidden shadow-md">
+                                <img src="dist/img/ProjectPhising.png" alt="Project 3"
+                                    class="w-full transition-transform duration-300 group-hover:scale-110">
+                            </div>
+                            <h3 class="text-lg font-semibold text-dark mt-4 group-hover:text-primary">Phising (Kali
+                                Linux,
+                                Blackeye)</h3>
+                            <p class="text-sm text-secondary">Project sederhana membuat website phising menggunakan
+                                Blackeye
+                                di Kali Linux untuk mendapatkan username, email, dan password dari log yang tersimpan.
+                            </p>
+                        </a>
+                    </div>
+                    <!-- Project Item 3 -->
+                    <div class="group">
+                        <a href="project4.html">
+                            <div class="rounded-lg overflow-hidden shadow-md">
+                                <img src="dist/img/SistemPakarfix.png" alt="Project 3"
+                                    class="w-full transition-transform duration-300 group-hover:scale-110">
+                            </div>
+                            <h3 class="text-lg font-semibold text-dark mt-4 group-hover:text-primary">Sistem Pakar
+                                (Python)</h3>
+                            <p class="text-sm text-secondary">Project sistem pakar yang mengenali hewan unggas
+                                berdasarkan ciri-ciri menggunakan bahasa pemrograman python.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Portfolio Section End-->
+
+    <!--Contact Section Start-->
+    <section id="contact" class="pt-36 pb-32 bg-slate-200">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">
+                        Contact
+                    </h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">
+                        Hubungi Saya
+                    </h2>
+                    <p class="font-medium text-md text-secondary md:text-lg">
+                        Hubungi saya melalui Whatsapp pribadi saya 👇.
+                    </p>
+                    <a href="http://wa.me/6282287355788" target="_blank"
+                        class="rounded-lg overflow-hidden shadow-md img-wrapper group">
+                        <img src="dist/img/WhatsappBackground.png" alt="Whatsapp"
+                            class="rounded-lg img-contact transition-transform duration-300 group-hover:scale-110 mt-4 lg:mt-8">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Contact Section End-->
+
+    <!--Footer Section Start-->
+    <footer class="bg-dark pt-24 pb-12">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+                    <h2 class="font-bold text-4xl text-white mb-5">
+                        IlhamAgusK
+                    </h2>
+                    <p>ilhamagusk109@gmail.com</p>
+                    <p>Tuah Karya, Kec. Tampan</p>
+                    <p>Kota Pekanbaru, Riau 28293</p>
+                </div>
+                <div class="w-full px-4 mb-10 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5">
+                        Keahlian
+                    </h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">
+                                Programming
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">
+                                Cybersecurity
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5">
+                        Tautan
+                    </h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#home" class="inline-block text-base hover:text-primary mb-3">
+                                Beranda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="inline-block text-base hover:text-primary mb-3">
+                                Tentang Saya
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="inline-block text-base hover:text-primary mb-3">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="inline-block text-base hover:text-primary mb-3">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full pt-10 border-t border-slate-700">
+                <div class="flex items-center justify-center mb-5">
+                    <!--Youtube-->
+                    <a href="https://www.youtube.com/@Xavierzz-q9f" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-350 hover:border-primary hover:bg-primary hover:text-white">
+                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>YouTube</title>
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+
+                    <!--Instagram-->
+                    <a href="https://www.instagram.com/ilham_agusk" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-350 hover:border-primary hover:bg-primary hover:text-white">
+                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Instagram</title>
+                            <path
+                                d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+                        </svg>
+                    </a>
+
+                    <!--Github-->
+                    <a href="https://github.com/IlhamAgusk" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-350 hover:border-primary hover:bg-primary hover:text-white">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>GitHub</title>
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                    </a>
+
+                    <!--Discord-->
+                    <a href="http://discordapp.com/users/1070530256689184799" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-350 hover:border-primary hover:bg-primary hover:text-white">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>Discord</title>
+                            <path
+                                d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-sm text-center text-slate-500 font-medium">
+                    &copy; <span id="currentYear"></span> Dibuat oleh
+                    <a href="https://yourwebsite.com" target="_blank" class="text-primary font-bold hover:underline">
+                        Ilham Agus Kurniawan</a>. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--Footer Section End-->
+
+    <!-- Back to Top Start -->
+    <a href="#home"
+        class="hidden fixed bottom-4 right-4 z-[9999] h-10 w-10 rounded-full bg-primary p-3 transition-transform transform hover:scale-110 focus:scale-110 md:h-14 md:w-14 md:p-4"
+        id="up">
+        <svg enable-background="new 0 0 32 32" id="Слой_1" version="1.1" viewBox="0 0 32 32" xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path clip-rule="evenodd"
+                d="M26.704,10.192l-9.999-9.899  c-0.397-0.393-1.03-0.378-1.428,0l-9.999,9.9c-0.394,0.391-0.394,1.024,0,1.414c0.395,0.391,1.034,0.391,1.429,0l8.275-8.192V31  c0,0.552,0.452,1,1.01,1s1.01-0.448,1.01-1V3.414l8.275,8.192c0.394,0.391,1.034,0.391,1.428,0  C27.099,11.216,27.099,10.583,26.704,10.192z"
+                fill="#121313" fill-rule="evenodd" id="Arrow_Upward"></path>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+        </svg>
+    </a>
+    <!-- Back to Top End -->
+
+    <script src="dist/js/script.js"></script>
+</body>
+
+</html>
